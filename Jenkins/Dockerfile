@@ -30,5 +30,6 @@ RUN apt-get update -qq \
 
 # Add Jenkins user to the Docker group
 RUN usermod -aG docker jenkins
+RUN chmod 777 /var/run/docker.sock
 
 USER jenkins
