@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t my-python-app:latest ."
+                    sh "docker build -t my-python-app:latest -f python-app/Dockerfile python-app/"
                 }
             }
         }
