@@ -15,19 +15,6 @@ services:
     networks:
       - monitoring
 
-  python-app:
-    image: my-python-app:latest
-    container_name: python-app
-    build:
-      context: ./python-app
-      dockerfile: Dockerfile
-    ports:
-      - "5001:5000"
-    networks:
-      - monitoring
-    depends_on:
-      - jenkins
-
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
