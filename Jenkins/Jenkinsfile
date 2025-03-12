@@ -27,7 +27,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh "curl -I http://localhost:5000"
+                    sh "curl -I http://localhost:5001"
                 }
             }
         }
