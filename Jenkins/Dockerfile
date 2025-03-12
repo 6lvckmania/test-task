@@ -2,7 +2,7 @@ FROM jenkins/jenkins:lts
 
 USER root
 
-# Install prerequisites
+# Install Docker
 RUN apt-get update -qq \
     && apt-get install -qqy \
         apt-transport-https \

@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t my-python-app:latest ."
+                    sh "sudo docker build -t my-python-app:latest ."
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 script {
-                    sh "docker-compose up -d"
+                    sh "sudo docker-compose up -d"
                 }
             }
         }
