@@ -1,0 +1,20 @@
+groups:
+  - name: container_alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: (sum(rate(container_cpu_usage_seconds_total{name=~".*"}[1m])) * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% for 5 minutes."
+
+      - alert: HighMemoryUsage
+        expr: (sum(container_memory_usage_bytes{name=~".*"}) / sum(container_spec_memory_limit_bytes{name=~".*"})) * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is above 80% for 5 minutes."
