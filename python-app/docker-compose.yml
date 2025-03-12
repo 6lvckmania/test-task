@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  python-app:
+    image: my-python-app:latest
+    container_name: python-app
+    build:
+      context: ./python-app
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge
