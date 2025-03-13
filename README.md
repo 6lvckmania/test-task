@@ -66,19 +66,7 @@ The documentation describes:
 ---
 
 ### 2. Project Structure
-├── Jenkins
-│   ├── Dockerfile
-│   └── Jenkinsfile
-├── README.md
-├── docker-compose.yml
-├── docker_restart_status.sh
-├── prometheus
-│   └── prometheus.yml
-└── python-app
-    ├── Dockerfile
-    ├── app.py
-    ├── docker-compose.yml
-    └── requirements.txt
+![screenshots/image3.png](screenshots/image3.png)
 
 ---
 
@@ -108,13 +96,16 @@ The documentation describes:
 
 ### 5. Running the Pipeline
 After the Jenkins job is created and configured, trigger the pipeline manually from Jenkins.
-
-Jenkins will automatically:
+- Jenkins will automatically:
     - Clone the repository.
     - Build the Docker image.
     - Run tests.
     - Push the image to the Docker registry.
     - Deploy the application using Docker Compose.
+
+### Example Screenshot:
+
+![screenshots/image0.png](screenshots/image0.png)
 
 ---
 
