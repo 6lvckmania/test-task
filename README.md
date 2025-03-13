@@ -1,4 +1,4 @@
-# DevOps Engineer Test Task
+# DevOps Test Task
 
 ## Objective
 Create a simple infrastructure that includes:
@@ -139,7 +139,7 @@ Jenkins will automatically:
 
 ### Example Screenshot:
 
-screenshots/image.png
+![screenshots/image.png](screenshots/image.png)
 
 The Prometheus **Targets** page will show the following:
 - `cadvisor` and `grafana` as targets, both with a status of `up`.
@@ -182,7 +182,7 @@ Grafana is a powerful tool for visualizing metrics collected by Prometheus. To c
 
 ### Example Screenshot:
 
-screenshots/image2.png
+![screenshots/image2.png](screenshots/image2.png)
 
 
 ### 8. Docker Container Management Script (docker_restart_status.sh)
